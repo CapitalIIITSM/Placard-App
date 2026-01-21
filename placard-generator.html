@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C3SKELX DIY Placard Webapp</title>
+    <style>
+        @font-face {
+            font-family: 'Bebas Neue Pro';
+            src: url('./Bebas_Neue_Pro_Bold.ttf') format('truetype');
+            font-weight: bold;
+        }
+        @font-face {
+            font-family: 'Heavitas Neue';
+            src: url('./HeavitasNeue-ExtraBold.woff2') format('woff2');
+            font-weight: 800;
+        }
+        @font-face {
+            font-family: 'Gill Sans Std';
+            src: url('./GillSansStd.otf') format('opentype');
+        }
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: url('./Proxima_Nova_Regular.woff2') format('woff2');
+            font-weight: normal;
+        }
+        @font-face {
+            font-family: 'Proxima Nova';
+            src: url('./Proxima_Nova_Semibold.woff2') format('woff2');
+            font-weight: 600;
+        }
+        @font-face {
+            font-family: 'Serpentine Std';
+            src: url('./SerpentineStd-Medium.otf') format('opentype');
+            font-weight: 500;
+        }
+        @font-face {
+            font-family: 'Serpentine Std';
+            src: url('./Serpentine_Bold.ttf') format('truetype');
+            font-weight: bold;
+        }
+        @font-face {
+            font-family: 'DIN';
+            src: url('./FF_DIN_Regular.otf') format('opentype');
+            font-weight: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #ffffff;
+            color: #042A45;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body.theme-sk {
+            color: #000000;
+        }
+
+        body.theme-elx {
+            color: #000000;
+        }
+
+        header {
+            background: #C1A67F;
+            color: #042A45;
+            padding: 2rem;
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body.theme-sk header {
+            background: #FFC600;
+            color: #000000;
+        }
+
+        body.theme-elx header {
+            background: #0069ad;
+            color: #ffffff;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2.5rem;
+            width: 100%;
+        }
+
+        .instructions {
+            background: #f8f8f8;
+            border-left: 4px solid #C1A67F;
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+            border-radius: 6px;
+            transition: border-left-color 0.3s ease;
+        }
+
+        body.theme-sk .instructions {
+            border-left-color: #FFC600;
+        }
+
+        body.theme-elx .instructions {
+            border-left-color: #0069ad;
+        }
+
+        .instructions h2 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .instructions ol {
+            margin-left: 1.5rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .template-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .template-card {
+            border: 3px solid #C1A67F;
+            border-radius: 8px;
+            padding: 1.25rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            background: white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+
+        .template-card.sk {
+            border-color: #FFC600;
+        }
+
+        .template-card.elx {
+            border-color: #0069ad;
+        }
+
+        .template-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        }
+
+        .template-card.active {
+            background: #C1A67F;
+        }
+
+        .template-card.sk.active {
+            background: #FFC600;
+        }
+
+        .template-card.elx.active {
+            background: #0069ad;
+        }
+
+        .template-card.active h3 {
+            color: #042A45;
+        }
+
+        .template-card.sk.active h3 {
+            color: #000000;
+        }
+
+        .template-card.elx.active h3 {
+            color: #ffffff;
+        }
+
+        .template-thumbnail {
+            width: 100%;
+            aspect-ratio: 1.4;
+            background: #f5f5f5;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            color: #999;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .template-card h3 {
+            font-size: 0.95rem;
+            text-align: center;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .editor-section {
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 1100px) {
+            .editor-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-panel {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            height: fit-content;
+        }
+
+        .form-panel h2 {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+            font-size: 0.95rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.2s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #C1A67F;
+        }
+
+        body.theme-sk .form-group input:focus {
+            border-color: #FFC600;
+        }
+
+        body.theme-elx .form-group input:focus {
+            border-color: #0069ad;
+        }
+
+        .preview-panel {
+            background: #fafafa;
+            padding: 2rem;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            min-height: 500px;
+        }
+
+        .preview-panel h2 {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        #preview-container {
+            flex: 1;
+            background: white;
+            padding: 2rem;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #placard-canvas {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-family: inherit;
+        }
+
+        button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        }
+
+        button:active:not(:disabled) {
+            transform: translateY(0);
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-save {
+            background: #C1A67F;
+            color: #042A45;
+        }
+
+        .btn-save:hover:not(:disabled) {
+            background: #DFCFA8;
+        }
+
+        body.theme-sk .btn-save {
+            background: #FFC600;
+            color: #000000;
+        }
+
+        body.theme-sk .btn-save:hover:not(:disabled) {
+            background: #F5DA5F;
+        }
+
+        body.theme-elx .btn-save {
+            background: #0069ad;
+            color: #ffffff;
+        }
+
+        body.theme-elx .btn-save:hover:not(:disabled) {
+            background: #8bc0e0;
+            color: #000000;
+        }
+
+        .btn-print {
+            background: #444;
+            color: white;
+        }
+
+        .btn-print:hover:not(:disabled) {
+            background: #222;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: #999;
+        }
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #print-canvas {
+                visibility: visible;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>C3SKELX DIY Placard Webapp</h1>
+        <p class="subtitle">Create professional name placards and hotel signs for Capital III, Seat King, and Electrex</p>
+    </header>
+
+    <div class="container">
+        <div class="instructions">
+            <h2>📋 How to Use</h2>
+            <ol>
+                <li>Select a template from the options below</li>
+                <li>For employee placards: Enter the person's name and job title</li>
+                <li>Preview your design in real-time</li>
+                <li>Click "Save" to download a print-ready JPEG (300 DPI, 8.5" × 11") or "Print" to print directly</li>
+            </ol>
+        </div>
+
+        <div class="editor-section" id="editor-section">
+            <div class="form-panel">
+                <h2>✏️ Edit Information</h2>
+                <div class="form-group" id="name-group" style="display: none;">
+                    <label for="name-input">Name</label>
+                    <input type="text" id="name-input" placeholder="Enter name here">
+                </div>
+                <div class="form-group" id="title-group" style="display: none;">
+                    <label for="title-input">Job Title</label>
+                    <input type="text" id="title-input" placeholder="Enter job title here">
+                </div>
+            </div>
+
+            <div class="preview-panel">
+                <h2>👁️ Preview</h2>
+                <div id="preview-container">
+                    <div class="loading">Select a template to begin</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="template-selector" id="template-selector">
+            <!-- Templates will be loaded here -->
+        </div>
+
+        <div class="button-group" id="button-group" style="display: none;">
+            <button class="btn-save" id="save-btn" onclick="savePlacard()">💾 Save JPEG</button>
+            <button class="btn-print" id="print-btn" onclick="printPlacard()">🖨️ Print</button>
+        </div>
+    </div>
+
+    <canvas id="print-canvas" style="display: none;"></canvas>
+
+    <script>
+        const templates = [
+            {
+                id: 'c3-office',
+                name: 'C3 Office Hotel',
+                company: 'c3',
+                type: 'hotel',
+                svg: 'C3S_Office_Hotel.svg'
+            },
+            {
+                id: 'c3-desk',
+                name: 'C3 Desk Hotel',
+                company: 'c3',
+                type: 'hotel',
+                svg: 'C3S_Desk_Hotel.svg'
+            },
+            {
+                id: 'c3-placard',
+                name: 'C3 Employee Placard',
+                company: 'c3',
+                type: 'placard',
+                svg: 'C3S_Individual_Placard.svg',
+                nameFont: 'Bebas Neue Pro',
+                nameSize: 50,
+                nameWeight: 'bold',
+                titleFont: 'Gill Sans Std',
+                titleSize: 21,
+                titleWeight: 'normal',
+                textColor: '#042A45',
+                nameX: 396,
+                nameY: 325,
+                titleX: 396,
+                titleY: 346
+            },
+            {
+                id: 'sk-office',
+                name: 'SK Office Hotel',
+                company: 'sk',
+                type: 'hotel',
+                svg: 'SK_Office_Hotel.svg'
+            },
+            {
+                id: 'sk-desk',
+                name: 'SK Desk Hotel',
+                company: 'sk',
+                type: 'hotel',
+                svg: 'SK_Desk_Hotel.svg'
+            },
+            {
+                id: 'sk-placard',
+                name: 'SK Employee Placard',
+                company: 'sk',
+                type: 'placard',
+                svg: 'SK_Individual_Placard.svg',
+                nameFont: 'Heavitas Neue',
+                nameSize: 30,
+                nameWeight: '800',
+                nameTransform: 'uppercase',
+                titleFont: 'Proxima Nova',
+                titleSize: 21,
+                titleWeight: 'normal',
+                textColor: '#000000',
+                nameX: 396,
+                nameY: 325,
+                titleX: 396,
+                titleY: 346
+            },
+            {
+                id: 'elx-office',
+                name: 'ELX Office Hotel',
+                company: 'elx',
+                type: 'hotel',
+                svg: 'ELX_Office_Hotel.svg'
+            },
+            {
+                id: 'elx-desk',
+                name: 'ELX Desk Hotel',
+                company: 'elx',
+                type: 'hotel',
+                svg: 'ELX_Desk_Hotel.svg'
+            },
+            {
+                id: 'elx-placard',
+                name: 'ELX Employee Placard',
+                company: 'elx',
+                type: 'placard',
+                svg: 'ELX_Individual_Placard.svg',
+                nameFont: 'Serpentine Std',
+                nameSize: 46,
+                nameWeight: '500',
+                titleFont: 'DIN',
+                titleSize: 21,
+                titleWeight: 'normal',
+                textColor: '#000000',
+                nameX: 396,
+                nameY: 325,
+                titleX: 396,
+                titleY: 346
+            },
+            {
+                id: 'c3skelx-it',
+                name: 'IT Support',
+                company: 'c3skelx',
+                type: 'hotel',
+                svg: 'C3SKELX_Universal_Hotel.svg'
+            }
+        ];
+
+        let currentTemplate = null;
+        let svgCache = {};
+        let currentCanvas = null;
+
+        // Initialize
+        async function init() {
+            renderTemplateSelector();
+            
+            console.log('Loading SVG templates...');
+            
+            // Preload all SVGs
+            for (const template of templates) {
+                try {
+                    const response = await fetch(template.svg);
+                    if (response.ok) {
+                        svgCache[template.id] = await response.text();
+                        console.log(`✓ Loaded ${template.svg}`);
+                    } else {
+                        console.error(`✗ Failed to load ${template.svg}: ${response.status}`);
+                    }
+                } catch (error) {
+                    console.error(`✗ Error loading ${template.svg}:`, error.message);
+                }
+            }
+            
+            console.log(`Loaded ${Object.keys(svgCache).length} of ${templates.length} templates`);
+        }
+
+        function renderTemplateSelector() {
+            const container = document.getElementById('template-selector');
+            container.innerHTML = templates.map(template => {
+                const companyClass = template.company === 'sk' ? 'sk' : 
+                                   template.company === 'elx' ? 'elx' : '';
+                return `
+                    <div class="template-card ${companyClass}" onclick="selectTemplate('${template.id}')" data-template="${template.id}">
+                        <div class="template-thumbnail">${template.name}</div>
+                        <h3>${template.name}</h3>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function selectTemplate(templateId) {
+            currentTemplate = templates.find(t => t.id === templateId);
+            
+            // Update active state
+            document.querySelectorAll('.template-card').forEach(card => {
+                card.classList.toggle('active', card.dataset.template === templateId);
+            });
+
+            // Update theme
+            document.body.className = '';
+            if (currentTemplate.company === 'sk') {
+                document.body.classList.add('theme-sk');
+            } else if (currentTemplate.company === 'elx') {
+                document.body.classList.add('theme-elx');
+            }
+
+            // Show/hide UI sections
+            document.getElementById('button-group').style.display = 'flex';
+
+            // Show/hide form fields based on template type
+            const nameGroup = document.getElementById('name-group');
+            const titleGroup = document.getElementById('title-group');
+            const nameInput = document.getElementById('name-input');
+            const titleInput = document.getElementById('title-input');
+            
+            if (currentTemplate.type === 'hotel') {
+                nameGroup.style.display = 'none';
+                titleGroup.style.display = 'none';
+            } else {
+                nameGroup.style.display = 'block';
+                titleGroup.style.display = 'block';
+                nameInput.value = '';
+                titleInput.value = '';
+            }
+
+            updatePreview();
+        }
+
+        async function updatePreview() {
+            if (!currentTemplate) return;
+
+            const container = document.getElementById('preview-container');
+            container.innerHTML = '<div class="loading">Generating preview...</div>';
+
+            const svgText = svgCache[currentTemplate.id];
+            if (!svgText) {
+                container.innerHTML = `
+                    <div class="loading" style="text-align: left; color: #d32f2f; padding: 2rem;">
+                        <strong>⚠️ Template file not found</strong><br><br>
+                        <p style="margin: 1rem 0; color: #666;">The SVG file <code>${currentTemplate.svg}</code> could not be loaded.</p>
+                        <p style="margin: 1rem 0; color: #666;"><strong>To fix this:</strong></p>
+                        <ol style="margin-left: 1.5rem; color: #666; line-height: 1.6;">
+                            <li>Make sure all SVG files are in the same folder as this HTML file</li>
+                            <li>Check that the file name matches exactly: <code>${currentTemplate.svg}</code></li>
+                            <li>Open your browser's Developer Console (F12) to see detailed error messages</li>
+                        </ol>
+                    </div>
+                `;
+                return;
+            }
+
+            // Create canvas
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Set canvas size (792x612 matches SVG viewBox)
+            canvas.width = 792 * 2; // 2x for better quality
+            canvas.height = 612 * 2;
+            canvas.style.maxWidth = '100%';
+            canvas.style.height = 'auto';
+            canvas.id = 'placard-canvas';
+
+            // Parse and modify SVG for text overlay
+            let modifiedSvg = svgText;
+            
+            if (currentTemplate.type === 'placard') {
+                const nameText = document.getElementById('name-input').value || 'Name Here';
+                const titleText = document.getElementById('title-input').value || 'Job Title Here';
+                
+                // Apply text transform if specified
+                const displayName = currentTemplate.nameTransform === 'uppercase' ? nameText.toUpperCase() : nameText;
+                
+                // Add text elements to SVG
+                const textElements = `
+                    <text x="${currentTemplate.nameX}" y="${currentTemplate.nameY}" 
+                          text-anchor="middle" 
+                          font-family="${currentTemplate.nameFont}" 
+                          font-size="${currentTemplate.nameSize}" 
+                          font-weight="${currentTemplate.nameWeight}"
+                          fill="${currentTemplate.textColor}">${escapeXml(displayName)}</text>
+                    <text x="${currentTemplate.titleX}" y="${currentTemplate.titleY}" 
+                          text-anchor="middle" 
+                          font-family="${currentTemplate.titleFont}" 
+                          font-size="${currentTemplate.titleSize}" 
+                          font-weight="${currentTemplate.titleWeight}"
+                          fill="${currentTemplate.textColor}">${escapeXml(titleText)}</text>
+                `;
+                
+                modifiedSvg = modifiedSvg.replace('</svg>', textElements + '</svg>');
+            }
+
+            // Render SVG to canvas
+            const img = new Image();
+            const svgBlob = new Blob([modifiedSvg], { type: 'image/svg+xml;charset=utf-8' });
+            const url = URL.createObjectURL(svgBlob);
+
+            img.onload = function() {
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                container.innerHTML = '';
+                container.appendChild(canvas);
+                currentCanvas = canvas;
+                URL.revokeObjectURL(url);
+            };
+
+            img.onerror = function() {
+                container.innerHTML = '<div class="loading">Error loading template</div>';
+                URL.revokeObjectURL(url);
+            };
+
+            img.src = url;
+        }
+
+        function escapeXml(text) {
+            return text.replace(/[<>&'"]/g, function(c) {
+                switch (c) {
+                    case '<': return '&lt;';
+                    case '>': return '&gt;';
+                    case '&': return '&amp;';
+                    case '\'': return '&apos;';
+                    case '"': return '&quot;';
+                }
+            });
+        }
+
+        // Listen to input changes
+        document.getElementById('name-input').addEventListener('input', updatePreview);
+        document.getElementById('title-input').addEventListener('input', updatePreview);
+
+        async function savePlacard() {
+            if (!currentTemplate || !currentCanvas) {
+                alert('Please select a template and wait for preview to load');
+                return;
+            }
+
+            const saveBtn = document.getElementById('save-btn');
+            saveBtn.disabled = true;
+            saveBtn.textContent = '⏳ Generating...';
+
+            // Create high-res canvas for export (8.5x11 at 300 DPI)
+            const exportCanvas = document.createElement('canvas');
+            const ctx = exportCanvas.getContext('2d');
+            exportCanvas.width = 2550;  // 8.5 * 300
+            exportCanvas.height = 3300; // 11 * 300
+
+            // White background
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, exportCanvas.width, exportCanvas.height);
+
+            // Draw current canvas centered
+            const scale = Math.min(exportCanvas.width / currentCanvas.width, exportCanvas.height / currentCanvas.height);
+            const x = (exportCanvas.width - currentCanvas.width * scale) / 2;
+            const y = (exportCanvas.height - currentCanvas.height * scale) / 2;
+            
+            ctx.drawImage(currentCanvas, x, y, currentCanvas.width * scale, currentCanvas.height * scale);
+
+            // Export as JPEG
+            exportCanvas.toBlob(function(blob) {
+                const link = document.createElement('a');
+                const timestamp = new Date().toISOString().slice(0,10);
+                link.download = `${currentTemplate.id}_${timestamp}.jpg`;
+                link.href = URL.createObjectURL(blob);
+                link.click();
+                URL.revokeObjectURL(link.href);
+                
+                saveBtn.disabled = false;
+                saveBtn.textContent = '💾 Save JPEG';
+            }, 'image/jpeg', 0.95);
+        }
+
+        function printPlacard() {
+            if (!currentTemplate || !currentCanvas) {
+                alert('Please select a template and wait for preview to load');
+                return;
+            }
+
+            // Copy to print canvas
+            const printCanvas = document.getElementById('print-canvas');
+            printCanvas.width = currentCanvas.width;
+            printCanvas.height = currentCanvas.height;
+            const ctx = printCanvas.getContext('2d');
+            ctx.drawImage(currentCanvas, 0, 0);
+            
+            // Trigger print
+            window.print();
+        }
+
+        // Initialize on page load
+        window.addEventListener('load', init);
+    </script>
+</body>
+</html>

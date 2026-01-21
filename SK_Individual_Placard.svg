@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 792 612">
+  <!-- Generator: Adobe Illustrator 30.1.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 136)  -->
+  <defs>
+    <style>
+      .st0, .st1, .st2, .st3 {
+        fill: none;
+      }
+
+      .st1, .st2, .st3 {
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+      }
+
+      .st4 {
+        font-size: 3.498px;
+      }
+
+      .st4, .st5, .st6, .st7 {
+        fill: #231f20;
+      }
+
+      .st4, .st8, .st6, .st7 {
+        font-family: HeavitasNeue-Black, 'Heavitas Neue';
+        font-weight: 800;
+      }
+
+      .st9 {
+        fill: #221f20;
+      }
+
+      .st5 {
+        font-family: ProximaNova-Regular, 'Proxima Nova';
+        font-size: 21px;
+      }
+
+      .st10 {
+        clip-path: url(#clippath-1);
+      }
+
+      .st11 {
+        clip-path: url(#clippath-2);
+      }
+
+      .st8 {
+        fill: #939598;
+      }
+
+      .st8, .st7 {
+        font-size: 6px;
+      }
+
+      .st2 {
+        stroke-dasharray: 12.185 12.185;
+      }
+
+      .st2, .st3 {
+        stroke-width: .5px;
+      }
+
+      .st12 {
+        fill: #fff;
+      }
+
+      .st13 {
+        fill: #ffc709;
+      }
+
+      .st6 {
+        font-size: 3px;
+      }
+
+      .st3 {
+        stroke-dasharray: 12 12;
+      }
+    </style>
+    <clipPath id="clippath-1">
+      <rect class="st0" width="792" height="612"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <rect class="st0" width="792" height="612"/>
+    </clipPath>
+  </defs>
+  <g class="st10">
+    <rect class="st13" x="98.264" y="376.5" width="596" height="43"/>
+    <path class="st13" d="M695.263,375.5H97.263v45h598v-45ZM693.263,418.5H99.263v-41h594v41Z"/>
+    <line class="st1" x1="666.2632" y1="306.5" x2="129.2632" y2="306.5"/>
+    <path class="st13" d="M201.623,268.6489c0,12.954-4.876,23.117-4.876,23.117,0,0-14.227,3.587-30.89,3.587-14.835,0-29.669-3.587-29.669-3.587,0,0-2.445-5.087-3.943-13.059h-2.564c1.579,9.257,4.393,15.221,4.393,15.221,0,0,15.874,3.915,31.748,3.915,17.831,0,33.052-3.915,33.052-3.915,0,0,5.22-11.09,5.22-25.224,0-3.77-.304-7.283-.76-10.438h-2.547c.496,3.098.836,6.598.836,10.383"/>
+    <path class="st13" d="M131.1069,266.6563c0-11.658,5.081-22.42,5.081-22.42,0,0,10.973-3.487,29.669-3.487s31.093,3.686,31.093,3.686c0,0,1.902,4.142,3.279,10.786h2.599c-1.481-7.93-3.736-12.938-3.736-12.938,0,0-13.265-4.023-33.271-4.023s-31.748,3.806-31.748,3.806c0,0-5.435,11.742-5.435,24.463,0,3.165.218,6.153.564,8.916h2.513c-.371-2.701-.608-5.652-.608-8.789"/>
+    <path class="st9" d="M199.8877,268.6111c0,12.136-4.637,21.658-4.637,21.658,0,0-13.525,3.361-29.368,3.361-14.106,0-28.21-3.361-28.21-3.361,0,0-2.185-4.482-3.616-11.562h-1.812c1.498,7.972,3.943,13.059,3.943,13.059,0,0,14.834,3.587,29.67,3.587,16.663,0,30.889-3.587,30.889-3.587,0,0,4.876-10.164,4.876-23.117,0-3.785-.34-7.285-.836-10.383h-1.797c.528,3.051.898,6.545.898,10.345"/>
+    <path class="st9" d="M165.8574,240.7493c-18.696,0-29.67,3.488-29.67,3.488,0,0-5.08,10.761-5.08,22.419,0,3.137.236,6.088.607,8.789h1.773c-.39-2.657-.645-5.579-.645-8.701,0-10.923,4.83-21.005,4.83-21.005,0,0,10.434-3.267,28.21-3.267s29.562,3.454,29.562,3.454c0,0,1.652,3.546,2.942,9.295h1.843c-1.378-6.644-3.28-10.785-3.28-10.785,0,0-12.397-3.687-31.092-3.687"/>
+    <path class="st12" d="M155.9277,270.2261h-14.787c-3.153,0-4.131-1.848-4.131-3.697v-7.719c0-1.74,1.304-3.697,4.24-3.697h18.265c5.219,0,5.437,5.545,5.437,5.545h-17.396v5.436h15.221c3.045,0,3.371,1.74,3.371,1.74v-12.612h10.763v8.589l6.416-8.589h15.059c-1.289-5.749-2.941-9.296-2.941-9.296,0,0-11.787-3.453-29.563-3.453s-28.209,3.266-28.209,3.266c0,0-4.83,10.082-4.83,21.005,0,3.122.255,6.045.646,8.701h22.439v-5.219Z"/>
+    <path class="st12" d="M186.3711,268.0513l9.458,12.938h-12.502l-6.415-8.806v9.024h-10.655v-2.175s-.544,2.066-4.349,2.066h-19.245c-3.262,0-4.566-2.391-4.566-2.391h-4.04c1.43,7.08,3.616,11.562,3.616,11.562,0,0,14.104,3.361,28.209,3.361,15.844,0,29.369-3.361,29.369-3.361,0,0,4.637-9.522,4.637-21.658,0-3.8-.371-7.294-.899-10.346h-5.443l-7.175,9.786Z"/>
+    <path class="st9" d="M202.8276,255.2217h-19.501l-6.415,8.59v-8.59h-10.764v12.612s-.326-1.739-3.37-1.739h-15.221v-5.436h17.396s-.218-5.546-5.437-5.546h-18.266c-2.936,0-4.24,1.957-4.24,3.697v7.719c0,1.849.978,3.697,4.131,3.697h14.787v5.219h-26.726c.141,1.126.301,2.217.48,3.262h8.415s1.304,2.392,4.566,2.392h19.245c3.806,0,4.349-2.066,4.349-2.066v2.174h10.655v-9.024l6.415,8.807h12.503l-9.459-12.938,7.176-9.786h9.787c-.152-1.057-.323-2.071-.506-3.044"/>
+    <text class="st5" transform="translate(576.5957 363.9902)"><tspan x="0" y="0">Seat King</tspan></text>
+  </g>
+  <g class="st11">
+    <text class="st8" transform="translate(104.8807 338.8306) rotate(-90)"><tspan x="0" y="0">CUT INSIDE OF THIS DO</tspan></text>
+    <text class="st8" transform="translate(104.8803 264.8862) rotate(-90)"><tspan x="0" y="0">TTED LIN</tspan></text>
+    <text class="st8" transform="translate(104.8806 236.7944) rotate(-90)"><tspan x="0" y="0">E</tspan></text>
+    <line class="st3" x1="684" x2="684" y2="612"/>
+    <line class="st3" x1="108" x2="108" y2="612"/>
+    <line class="st2" y1="198.001" x2="792" y2="198.001"/>
+    <line class="st2" y1="414.001" x2="792" y2="414.001"/>
+    <text class="st7" transform="translate(176.4917 194.3477)"><tspan x="0" y="0">CUT JUS</tspan></text>
+    <text class="st7" transform="translate(204.3374 194.3477)"><tspan x="0" y="0">T</tspan></text>
+    <text class="st7" transform="translate(210.1577 194.3477)"><tspan x="0" y="0" xml:space="preserve"> INSIDE OF THIS DO</tspan></text>
+    <text class="st7" transform="translate(270.4155 194.3477)"><tspan x="0" y="0">TTED LINE: INTENDED CUT SIZE IS </tspan></text>
+    <text class="st7" transform="translate(380.3594 194.3477)"><tspan x="0" y="0">~2.875</tspan></text>
+    <text class="st7" transform="translate(399.6611 194.3477)"><tspan x="0" y="0"> </tspan></text>
+    <text class="st4" transform="translate(401.1084 194.3457)"><tspan x="0" y="0">X </tspan></text>
+    <text class="st7" transform="translate(404.6582 194.3477)"><tspan x="0" y="0">7.</tspan></text>
+    <text class="st7" transform="translate(409.1826 194.3477)"><tspan x="0" y="0" xml:space="preserve">875” OR 2    </tspan></text>
+    <text class="st4" transform="translate(444.5156 194.3457)"><tspan x="0" y="0">X </tspan></text>
+    <text class="st7" transform="translate(448.0664 194.3477)"><tspan x="0" y="0">7</tspan></text>
+    <text class="st6" transform="translate(439.3516 190.6855)"><tspan x="0" y="0">7</tspan></text>
+    <text class="st6" transform="translate(439.3516 192.687)"><tspan x="0" y="0" xml:space="preserve"> /</tspan></text>
+    <text class="st6" transform="translate(439.3516 194.6875)"><tspan x="0" y="0" xml:space="preserve">  </tspan></text>
+    <text class="st6" transform="translate(440.791 194.6875)"><tspan x="0" y="0" xml:space="preserve"> 8</tspan></text>
+    <text class="st6" transform="translate(452.4492 190.689)"><tspan x="0" y="0">7</tspan></text>
+    <text class="st6" transform="translate(452.4492 192.6899)"><tspan x="0" y="0" xml:space="preserve"> /</tspan></text>
+    <text class="st6" transform="translate(452.4492 194.6909)"><tspan x="0" y="0" xml:space="preserve">  </tspan></text>
+    <text class="st6" transform="translate(453.8896 194.6909)"><tspan x="0" y="0" xml:space="preserve"> 8</tspan></text>
+  </g>
+</svg>

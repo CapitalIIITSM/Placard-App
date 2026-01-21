@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 792 612">
+  <!-- Generator: Adobe Illustrator 30.1.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 136)  -->
+  <defs>
+    <style>
+      .st0, .st1, .st2 {
+        fill: none;
+      }
+
+      .st3 {
+        font-size: 3.498px;
+      }
+
+      .st3, .st4, .st5, .st6 {
+        font-family: HeavitasNeue-Black, 'Heavitas Neue';
+        font-weight: 800;
+      }
+
+      .st3, .st5, .st6 {
+        fill: #231f20;
+      }
+
+      .st7 {
+        clip-path: url(#clippath-1);
+      }
+
+      .st8 {
+        clip-path: url(#clippath-2);
+      }
+
+      .st4 {
+        fill: #939598;
+      }
+
+      .st4, .st6 {
+        font-size: 6px;
+      }
+
+      .st1 {
+        stroke-dasharray: 12 12;
+      }
+
+      .st1, .st2 {
+        stroke: #939598;
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+
+      .st9 {
+        fill: #ffc709;
+      }
+
+      .st5 {
+        font-size: 3px;
+      }
+
+      .st2 {
+        stroke-dasharray: 12.185 12.185;
+      }
+
+      .st10 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="st0" width="792" height="612"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="st0" width="792" height="612"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <rect class="st0" width="792" height="612"/>
+    </clipPath>
+  </defs>
+  <g class="st10">
+    <rect class="st9" x="102.685" y="185.76" width="587.157" height="229.68"/>
+  </g>
+  <g class="st7">
+    <rect x="99.263" y="364.5" width="594" height="54"/>
+    <path d="M241.3378,328.7136v-86.842l-54.906-.501v87.719h-25.478c-2.092,0-3.788-1.696-3.788-3.788v-97.737c0-2.093,1.696-3.789,3.788-3.789h105.143c2.092,0,3.788,1.696,3.788,3.789v97.653c0,2.11-1.724,3.813-3.833,3.788l-24.714-.292ZM230.2348,292.0176c-2.497,0-4.522-2.025-4.522-4.522s2.025-4.522,4.522-4.522,4.522,2.025,4.522,4.522-2.024,4.522-4.522,4.522M270.1338,214.2446h-113.217c-5.126,0-9.282,4.156-9.282,9.282v105.812c0,5.126,4.155,9.282,9.282,9.282h113.217c5.126,0,9.282-4.156,9.282-9.282v-105.812c0-5.126-4.156-9.282-9.282-9.282"/>
+    <path class="st9" d="M475.5001,388.8086c0-5.775,2.553-11.105,2.553-11.105,0,0,5.516-1.727,14.914-1.727s15.628,1.826,15.628,1.826c0,0,.873,1.875,1.555,4.914h-7.961l-3.391,4.542v-4.542h-5.691v6.668s-.172-.919-1.782-.919h-8.047v-2.874h9.197s-.115-2.932-2.874-2.932h-9.656c-1.553,0-2.242,1.035-2.242,1.954v4.081c0,.978.517,1.955,2.184,1.955h7.817v2.759h-11.863c-.206-1.404-.341-2.949-.341-4.6M510.9441,389.7956c0,6.416-2.451,11.451-2.451,11.451,0,0-7.15,1.776-15.526,1.776-7.457,0-14.914-1.776-14.914-1.776,0,0-1.155-2.37-1.911-6.113h2.136s.689,1.264,2.414,1.264h10.173c2.012,0,2.3-1.092,2.3-1.092v1.149h5.633v-4.77l3.391,4.656h6.61l-5.001-6.841,3.794-5.173h2.877c.279,1.613.475,3.46.475,5.469M512.7661,384.3266h0c-.081-.559-.171-1.095-.267-1.61h-.001c-.782-4.192-1.975-6.84-1.975-6.84,0,0-7.012-2.127-17.588-2.127s-16.784,2.012-16.784,2.012c0,0-2.874,6.208-2.874,12.933,0,1.674.115,3.253.298,4.714.075.595.16,1.172.254,1.725.835,4.894,2.322,8.047,2.322,8.047,0,0,8.392,2.069,16.784,2.069,9.426,0,17.473-2.069,17.473-2.069,0,0,2.76-5.863,2.76-13.336,0-1.993-.161-3.85-.402-5.518M645.4961,390.5016h7.692v6.829h-13.792c-.54,0-1.033-.196-1.356-.538-.328-.345-.467-.787-.4661-1.198v-8.276c-.02-.515.2531-1.063.683-1.313.418-.255.862-.304,1.327-.308h13.765l-1.873,2.241-.207.248-7.955-.001v6.482h4.306v-2.315h-2.124v-1.851ZM635.7371,387.3176v9.955h-5.625v-9.087h-4.364v9.029h-5.624v-11.517h13.834c.544-.004,1.037.155,1.365.504.329.345.416.777.414,1.116M612.6611,385.6396h5.568v11.633h-5.568v-11.633ZM604.2711,390.0366l6.226,7.236h-8.255l-4.162-4.85v4.908h-7.175v-14.585h7.003v4.955l4.398-4.955h8.181l-6.216,7.291ZM573.2811,388.1866v-2.431h15.5v2.431h-4.937v9.086h-5.626v-9.086h-4.937ZM565.3021,390.3276l-4.707,6.945h-6.142l7.749-11.575h6.257l7.75,11.575h-12.399v-2.431h4.592l-3.1-4.514ZM554.3381,385.6976l-1.894,2.431h-8.095v2.431h8.095v1.736h-8.037v2.546h9.931l-1.952,2.431h-13.605v-11.575h15.557ZM524.1431,385.8716v3.01h10.046c1.32,0,2.354.52,2.354,1.794v4.687c0,1.216-.804,1.794-2.698,1.794h-13.433c-2.813,0-3.215-2.951-3.215-2.951h12.4v-3.068h-10.506c-.689,0-1.894-.347-1.894-1.678v-4.688c0-1.505,1.205-1.852,2.583-1.852h13.203c3.56,0,3.272,3.068,3.272,3.068l-12.112-.116Z"/>
+    <path class="st9" d="M655.2866,397.1539c-.485,0-.863-.375-.863-.885,0-.502.378-.88.863-.88.479,0,.858.378.858.88,0,.51-.379.885-.858.885M655.2866,395.2119c-.583,0-1.076.448-1.076,1.057,0,.613.493,1.062,1.076,1.062.577,0,1.071-.449,1.071-1.062,0-.609-.494-1.057-1.071-1.057"/>
+    <path class="st9" d="M655.0623,396.1959v-.378h.252c.129,0,.267.028.267.179,0,.188-.14.199-.297.199h-.222ZM655.7743,396.0079c0-.241-.143-.347-.431-.347h-.4659v1.222h.185v-.53h.213l.322.53h.208l-.348-.539c.18-.022.317-.117.317-.336"/>
+  </g>
+  <g class="st8">
+    <line class="st1" x1="684" x2="684" y2="612"/>
+    <line class="st1" x1="108" x2="108" y2="612"/>
+    <line class="st2" y1="198.001" x2="792" y2="198.001"/>
+    <line class="st2" y1="414.001" x2="792" y2="414.001"/>
+    <text class="st6" transform="translate(176.4917 194.3477)"><tspan x="0" y="0">CUT JUS</tspan></text>
+    <text class="st6" transform="translate(204.3374 194.3477)"><tspan x="0" y="0">T</tspan></text>
+    <text class="st6" transform="translate(210.1577 194.3477)"><tspan x="0" y="0" xml:space="preserve"> INSIDE OF THIS DO</tspan></text>
+    <text class="st6" transform="translate(270.4155 194.3477)"><tspan x="0" y="0">TTED LINE: INTENDED CUT SIZE IS </tspan></text>
+    <text class="st6" transform="translate(380.3594 194.3477)"><tspan x="0" y="0">~2.875</tspan></text>
+    <text class="st6" transform="translate(399.6611 194.3477)"><tspan x="0" y="0"> </tspan></text>
+    <text class="st3" transform="translate(401.1084 194.3457)"><tspan x="0" y="0">X </tspan></text>
+    <text class="st6" transform="translate(404.6582 194.3477)"><tspan x="0" y="0">7.</tspan></text>
+    <text class="st6" transform="translate(409.1826 194.3477)"><tspan x="0" y="0" xml:space="preserve">875” OR 2    </tspan></text>
+    <text class="st3" transform="translate(444.5156 194.3457)"><tspan x="0" y="0">X </tspan></text>
+    <text class="st6" transform="translate(448.0664 194.3477)"><tspan x="0" y="0">7</tspan></text>
+    <text class="st5" transform="translate(439.3516 190.6855)"><tspan x="0" y="0">7</tspan></text>
+    <text class="st5" transform="translate(439.3516 192.687)"><tspan x="0" y="0" xml:space="preserve"> /</tspan></text>
+    <text class="st5" transform="translate(439.3516 194.6875)"><tspan x="0" y="0" xml:space="preserve">  </tspan></text>
+    <text class="st5" transform="translate(440.791 194.6875)"><tspan x="0" y="0" xml:space="preserve"> 8</tspan></text>
+    <text class="st5" transform="translate(452.4492 190.689)"><tspan x="0" y="0">7</tspan></text>
+    <text class="st5" transform="translate(452.4492 192.6899)"><tspan x="0" y="0" xml:space="preserve"> /</tspan></text>
+    <text class="st5" transform="translate(452.4492 194.6909)"><tspan x="0" y="0" xml:space="preserve">  </tspan></text>
+    <text class="st5" transform="translate(453.8896 194.6909)"><tspan x="0" y="0" xml:space="preserve"> 8</tspan></text>
+    <text class="st4" transform="translate(104.8813 382.8301) rotate(-90)"><tspan x="0" y="0">CUT INSIDE OF THIS DO</tspan></text>
+    <text class="st4" transform="translate(104.8809 264.8887) rotate(-90)"><tspan x="0" y="0">TTED LIN</tspan></text>
+    <text class="st4" transform="translate(104.8807 219.793) rotate(-90)"><tspan x="0" y="0">E</tspan></text>
+    <text class="st4" transform="translate(104.8804 338.8262) rotate(-90)"><tspan x="0" y="0">CUT INSIDE OF THIS DO</tspan></text>
+    <text class="st4" transform="translate(104.881 264.8828) rotate(-90)"><tspan x="0" y="0">TTED LIN</tspan></text>
+    <text class="st4" transform="translate(104.8807 236.791) rotate(-90)"><tspan x="0" y="0">E</tspan></text>
+  </g>
+</svg>
